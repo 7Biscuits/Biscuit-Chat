@@ -7,7 +7,7 @@ const PromptBox = (props) => {
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        props.newPrompt(prompt)
+        props.newPrompt(prompt, false)
         setPrompt('')
         e.target.prompt.value = ''
     }
