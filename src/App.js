@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Sidebar from "./components/Sidebar"
 import MessageBox from "./components/MessageBox"
 import PromptBox from "./components/PromptBox"
 
@@ -11,14 +12,18 @@ const App = () => {
   }
 
   return (
-    <div className="min-w-full min-h-screen bg-gray-800">
-      <div className="overflow-x-scroll">
-        {messages}
-      </div>
-        <div className="fixed mt-[38rem] bottom-0 top-0 right-0 left-0">
+    <>
+      <div className="max-w-full min-h-screen bg-gray-800">
+        <Sidebar />
+        <div className="overflow-x-scroll absolute ml-[20rem]">
+          <MessageBox message={"Hello world"} />
+          {/* {messages} */}
+        </div>
+        <div className="block absolute bottom-0 left-0 right-0">
           <PromptBox newPrompt={(prompt, bot) => appendMessage(prompt, bot)} />
         </div>
-    </div>
+      </div>
+    </>
   )
 }
 
