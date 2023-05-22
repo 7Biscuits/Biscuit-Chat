@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import MessageBox from "./components/MessageBox"
+import PromptBox from "./components/PromptBox"
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="min-w-full min-h-screen bg-gray-800">
+      <div className="overflow-x-scroll">
+        {/* <MessageBox message={"Hello, how can I assist you today?"} bot={false} />
+        <MessageBox message={"Hello, how can I assist you today?"} bot={true} /> */}
+      </div>
+        <div className="fixed mt-[38rem] bottom-0 top-0 right-0 left-0">
+          <PromptBox newPrompt={(prompt) => console.log(prompt)} />
+        </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
