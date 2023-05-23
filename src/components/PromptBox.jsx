@@ -14,7 +14,7 @@ const PromptBox = (props) => {
 
     return (
         <>
-            <form onSubmit={handleSubmit} className="stretch mx-2 flex flex-row gap-3 last:mb-2 md:mx-auto md:last:mb-6 lg:mx-auto lg:max-w-2xl xl:max-w-3xl sm:max-w-sm sm:mx-auto">
+            <form onSubmit={handleSubmit} className="stretch flex flex-row gap-3 last:mb-2 mx-auto md:last:mb-6 max-w-sm lg:max-w-2xl xl:max-w-3xl ">
                 <div className="relative flex h-full flex-1 items-stretch md:flex-col">
                     <div>
                         <div className="h-full flex ml-1 md:w-full md:m-auto md:mb-2 gap-0 md:gap-2 justify-center">
