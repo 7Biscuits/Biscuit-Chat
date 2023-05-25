@@ -1,16 +1,12 @@
-import { Configuration, OpenAIApi } from "openai"
-// import dotenv from "dotenv"
-
-// dotenv.config()
+const { Configuration, OpenAIApi } = require("openai")
 
 const configuration = new Configuration({
-    // apiKey: process.env.OPENAI_KEY
-    apiKey: "c4snkbYN3KkP13uG698TT3BlbkFJsdnYvENU121I057U8nF4"
+    apiKey: process.env.OPENAI_KEY
 })
 
 const openai = new OpenAIApi(configuration)
 
-async function response(prompt) {
+const response = async (prompt) => {
     const res = await openai.createCompletion({
         model: "text-davinci-003",
         prompt,
@@ -20,7 +16,11 @@ async function response(prompt) {
         frequency_penalty: 0,
         presence_penalty: 0,
     })
-    return res.data.choices[0].text
+    // return res.data.choices[0].text
+    console.log(res.data.choices[0].text)
 }
 
-export default response
+// export default response
+
+// response("hey how are you")
+console.log(process.env.OPENAI_KEY)
