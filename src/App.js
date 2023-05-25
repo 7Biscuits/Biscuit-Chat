@@ -22,7 +22,7 @@ const App = () => {
     <>
       <div className="max-w-full min-h-screen bg-gray-800">
         <Sidebar />
-        <div className="max-w-full h-screen overflow-x-scroll overflow-y-scroll ml-2 lg:ml-[20rem] md:ml-[15rem] xl:ml[20rem] mt-10 lg:mt-1 md:mt-1 xl:mt-1">
+        <div className="max-w-full h-[86vh] overflow-x-scroll overflow-y-scroll ml-2 lg:ml-[20rem] md:ml-[15rem] xl:ml[20rem] mt-10 lg:mt-1 md:mt-1 xl:mt-1">
           { messages }
           <div ref={bottomRef} />
         </div>
